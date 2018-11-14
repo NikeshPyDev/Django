@@ -1,6 +1,8 @@
-{% extend 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
+
+    <h3><a href="{% url 'video:user-create' %}">New User</a></h3>
 
     <table class="table table-bordered" width="80%">
         <thead>
