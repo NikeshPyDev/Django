@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Link</th>
+            </tr>
+            {% for video in videos %}
+                <tr>
+                    <td> {{ video.name }}</td>
+                    <td> <a href="{% url 'download_video' path=video.upload.path %}">{{video.upload.path}}</a></td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="2"><a href="{% url 'upload_video' %}">Upload Videos</a></td>
+            </tr>
+        </thead>
+    </table>
+
+{% endblock %}
