@@ -54,6 +54,7 @@ class Login(View):
 #             messages.error(request, 'username and password not found!!')
 #         return render(request, self.template_name)
 #
+
 class Dashboard(UserPassesTestMixin, View):
 
     template_name = 'registration/dashboard.html'
